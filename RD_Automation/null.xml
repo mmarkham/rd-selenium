@@ -1,0 +1,15 @@
+<EDM>
+  <name>TestMatter</name>
+  <custodianUser>UserJohn</custodianUser>
+  <custodianFirst>John</custodianFirst>
+  <custodianLast>Johnsson</custodianLast>
+  <custodiansImport>C:/somefolder/</custodiansImport>
+  <dataSourcesImport>C:/somefolder/</dataSourcesImport>
+  <eda>
+    <edaName>Eda Name</edaName>
+    <edaDS>//mm-64win7ol13/qafiles/files</edaDS>
+  </eda>
+</EDM>
+<User>
+  <userName>User Name</userName>
+</User>
