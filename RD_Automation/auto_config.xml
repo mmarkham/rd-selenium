@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config [
+	<!ELEMENT config (setup,edms,entsearches,user)>
+		<!ELEMENT setup (init,matterLocation,companyName,indexLocation,numberOfSmallIndexes,numberOfMediumIndexes,numberOfLargeIndexes)>
+			<!ELEMENT init (#PCDATA)>
+			<!ELEMENT matterLocation (#PCDATA)>
+			<!ELEMENT companyName (#PCDATA)>
+			<!ELEMENT indexLocation (#PCDATA)>
+			<!ELEMENT numberOfSmallIndexes (#PCDATA)>
+			<!ELEMENT numberOfMediumIndexes (#PCDATA)>
+			<!ELEMENT numberOfLargeIndexes (#PCDATA)>
+		<!ELEMENT edms (edm*)>
+			<!ELEMENT edm (name,custodianUserName,custodianFirstName,custodianLastName,importCustodians*,importDataSources*,dsEDM*,criteriaName*,eda*)>
+				<!ELEMENT name (#PCDATA)>
+				<!ELEMENT custodianUserName (#PCDATA)>
+				<!ELEMENT custodianFirstName (#PCDATA)>
+				<!ELEMENT custodianLastName (#PCDATA)>
+				<!ELEMENT importCustodians (#PCDATA)>
+				<!ELEMENT importDataSources (#PCDATA)>
+				<!ELEMENT dsEDM (name,dsLocation,connectorType)>
+					<!ELEMENT name (#PCDATA)>
+					<!ELEMENT dsLocation (#PCDATA)>
+					<!ELEMENT connectorType (#PCDATA)>
+				<!ELEMENT criteriaName (#PCDATA)>
+				<!ELEMENT eda (edaName, edaDS)>
+					<!ELEMENT edaName (#PCDATA)>
+					<!ELEMENT edaDS (#PCDATA)>
+		<!ELEMENT entSearches (es*)>
+			<!ELEMENT es (name,importDataSources*,dsES*,criteriaName*)>
+				<!ELEMENT name (#PCDATA)>
+				<!ELEMENT importDataSources (#PCDATA)>
+				<!ELEMENT dsES (name,dsLocation,connectorType)>
+					<!ELEMENT name (#PCDATA)>
+					<!ELEMENT dsLocation (#PCDATA)>
+					<!ELEMENT connectorType (#PCDATA)>
+				<!ELEMENT criteriaName (#PCDATA)>
+		<!ELEMENT user (userName)>
+			<!ELEMENT userName (#PCDATA)>
+] >
+<config>
+<setup>
+	<init>true</init>
+	<matterLocation>\\MM-64SERV12\Matters</matterLocation>
+	<companyName>Corporate Persons</companyName>
+	<indexLocation>\\MM-64SERV12\Indexes</indexLocation>
+	<numberOfSmallIndexes>1</numberOfSmallIndexes>
+	<numberOfMediumIndexes>1</numberOfMediumIndexes>
+	<numberOfLargeIndexes>1</numberOfLargeIndexes>
+</setup>
+<edms>
+	<edm>
+		<name>test5</name>
+		<custodianUserName>TimJim</custodianUserName>
+		<custodianFirstName>Timothy</custodianFirstName>
+		<custodianLastName>Jimothy</custodianLastName>
+		<importCustodians>C:\Users\Juckke\Desktop\x1\Load_Test_All-custodians.xls</importCustodians>
+		<importDataSources>C:\Users\Juckke\Desktop\x1\QA_basicDS_import.xlsx</importDataSources>
+		<dsEDM>
+			<name>PstsAdded1322df2dds241</name>
+			<dsLocation>\\mm-64win7ol13\qafiles\psts</dsLocation>
+			<!-- Connector Types: 0 = GDrive, 1 = Exchange 365, 2 = Sharepoint -->
+			<!-- 3 = Exchange, 4 = imap, 5 = box, 6 = PST, 7 = File -->
+			<connectorType>6</connectorType>
+		</dsEDM>
+		<eda>
+			<edaName>EDAFiless1df1</edaName>
+			<edaDS>\\mm-64win7ol13\qafiles\files</edaDS>
+		</eda>
+		<criteriaName>Critd1f11111</criteriaName>
+	</edm>
+</edms>
+<entSearches>
+	<es>
+		<name>es424</name>
+		<importDataSources>C:\Users\Juckke\Desktop\x1\QA_basicDS_import.xlsx</importDataSources>
+		<dsES>
+			<name>files12fghgjg3</name>
+			<dsLocation>\\mm-64win7ol13\qafiles\files</dsLocation>
+			<!-- Connector Types: 0 = SharePoint, 1 = Exchange, 2 = PST, 3 = File -->
+			<connectorType>3</connectorType>
+		</dsES>
+		<criteriaName>Crit3</criteriaName>
+	</es>
+</entSearches>
+<user>
+	<userName>mm-64serv12.qa.x1dev.com</userName>
+</user>
+</config>
